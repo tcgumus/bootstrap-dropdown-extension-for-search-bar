@@ -8,3 +8,4 @@ This is not a complete extension but it lets you do the job without changing boo
 
 Just use the js code in the header. Give data as an array in line 29.
 
+To have a idea what is look like : http://a1211.hizliresim.com/13/9/fsgbb.png
