@@ -1,4 +1,3 @@
-<?php include("fonk.php"); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -12,11 +11,7 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
     
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>      
-    <link rel="stylesheet" type="text/css" href="bicim.css" />
-    <link rel="apple-touch-icon" href="files/<?php echo $adres['idsha']; ?>app.png"/>
-    <link rel="shortcut icon" href="faviconn.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/bizimstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
@@ -25,16 +20,22 @@
 
 
   <script type="text/javascript">
+
+        //this is where we get data as an array.
         <?php $liste = getsearch(); ?>
         var data = new Array(<?php echo $liste; ?>);
+
+
         $(function ()  {$("#tooltip").tooltip(); }); 
+
+
         $(function ()  {$('.dropdown-toggle').dropdown() }); 
         jQuery(document).ready(function() {
             $('#aramaveri').typeahead({source: data, display: 'marka', items:10,  menu: '<ul class="typeahead dropdown-menu"></ul>' , item: '<li class=""><a href="#"></a></li>', updater:function (item) {
                     //item = selected item
                     //do your stuff.
                     if (item == undefined) { item=$('#aramaveri').val().toString(); }
-                    window.location="arama.php?search="+item;
+                    window.location="search.php?search="+item;
                     //dont forget to return the item to reflect them into input
                     return item;
                 } });
@@ -58,7 +59,7 @@
             }
             });
         });
-
+    //if you want to submit. use a form with action to search.php
 
     </script>
 
