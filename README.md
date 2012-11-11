@@ -8,6 +8,6 @@ This is not a complete extension but it lets you do the job without changing boo
 
 Just use the js code in the header. Give data as an array in line 29.
 <br><br>
-<b>To have a idea what is look like : <b><hr>![typeahead](http://a1211.hizliresim.com/13/9/fsgbb.png)<hr>
+<b>To have a idea what is look like : <b><hr>![typeahead](https://raw.github.com/tcgumus/bootstrap-dropdown-extension-for-search-bar/master/pic.png)<hr>
 <h5>Thank you</h5>
 
